@@ -44,7 +44,21 @@ body {
     to { opacity: 1; transform: translateY(0); }
   }
   
-  h1 { font-size: 1.9rem; animation: fadeInUp 1s ease-out 0.2s both; }
+  /* h1 { font-size: 1.9rem; animation: fadeInUp 1s ease-out 0.2s both; } */
+  .center-text h1 {
+    font-size: 1.9rem;
+    word-break: keep-all;          /* Prevents breaking words with hyphens */
+    overflow-wrap: normal;         /* Avoids breaking inside words */
+    animation: fadeInUp 1s ease-out 0.2s both; 
+  }
+  
+  @media (max-width: 480px) {
+    .center-text h1 {
+      display: inline-block;
+      text-align: center;
+      white-space: pre-line;       /* Allows manual line break if needed */
+    }
+  }
   
   .center-text { text-align: center; }
   
