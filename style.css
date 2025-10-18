@@ -104,32 +104,30 @@ body {
   }
   
 .abstract.education strong {
-    color: #ffffff; /* same subtle blue as hover links or About Me */
+    color: #ffffff;
 }
 .abstract.education {
     text-align: center;
 }
 
 .college-logo {
-    display: block;       /* makes it a block element */
-    margin: 0 auto 1rem;  /* centers horizontally and adds bottom margin */
+    display: block;
+    margin: 0 auto 1rem;
     width: 100px;
     height: auto;
-    /* border-radius: 8px;
-    border: 1px solid #aaa; */
     animation: fadeInScale 1s ease-out;
 }
 
 .contact-icons {
     display: flex;
     justify-content: center;
-    gap: 1rem; /* space between icons */
+    gap: 1rem;
     margin-top: 0.5rem;
   }
   
   .contact-icon {
-    width: 32px;   /* uniform width */
-    height: 29px; /* uniform height */
+    width: 32px;
+    height: 29px;
     transition: transform 0.3s ease, filter 0.3s ease;
   }
   
@@ -137,6 +135,7 @@ body {
     transform: scale(1.1);
     filter: drop-shadow(0 0 5px rgba(128, 192, 255, 0.6));
   }
+
 /* ===== Enhanced Experience Section ===== */
 .experience {
     max-width: 700px;
@@ -169,15 +168,32 @@ body {
   .company-logo-container {
     margin-right: 1.2rem;
     flex-shrink: 0;
+    width: 70px !important;
+    height: 70px !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
   }
   
   .company-logo {
-    width: 70px;
-    height: 70px;
-    object-fit: contain;
+    width: 70px !important;
+    height: 70px !important;
+    max-width: 70px !important;
+    max-height: 70px !important;
+    object-fit: contain !important;
     border-radius: 8px;
     background: rgba(255, 255, 255, 0.05);
     padding: 5px;
+    display: block !important;
+    margin: 0 !important;
+  }
+  
+  /* More specific selector to override LaTeX.css */
+  .experience-entry .company-logo-container img.company-logo {
+    width: 70px !important;
+    height: 70px !important;
+    max-width: 70px !important;
+    max-height: 70px !important;
   }
   
   .experience-title h3 {
@@ -300,12 +316,15 @@ body {
   }
   
   .platform-logo {
-    width: 40px;
-    height: 40px;
+    width: 40px !important;
+    height: 40px !important;
+    max-width: 40px !important;
+    max-height: 40px !important;
     margin-right: 12px;
     border-radius: 6px;
-    object-fit: contain;
+    object-fit: contain !important;
     flex-shrink: 0;
+    display: block !important;
   }
   
   .article-info {
@@ -372,7 +391,7 @@ body {
     }
     
     .article-header {
-      flex-direction: column; /* stack logo + info + link */
+      flex-direction: column;
       text-align: center;
       gap: 0.8rem;
     }
@@ -386,7 +405,7 @@ body {
     
     .platform-logo {
       margin-right: 0;
-      margin-bottom: 0.5rem; /* smaller bottom margin */
+      margin-bottom: 0.5rem;
     }
     
     .article-info h3 {
@@ -399,15 +418,14 @@ body {
     
     .article-link-container {
       margin-left: 0;
-      width: 100%;       /* make link full width */
+      width: 100%;
       text-align: center;
       margin-top: 0.5rem;
     }
     
     .article-link {
-      width: auto;       /* let it shrink nicely */
+      width: auto;
       text-align: center;
       display: inline-block;
     }
   }
-  
