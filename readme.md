@@ -1,7 +1,7 @@
   <!-- New Articles Section -->
   <div class="abstract articles">
     <strong>Articles & Publications</strong>
-    <p class="articles-subtitle">Technical writings on Low Level Design principles and patterns</p>
+    <p class="articles-subtitle">Technical writings on Low Level Design principles and patterns</p> 
     
     <div class="articles-grid">
       <div class="article-card">
